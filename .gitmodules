@@ -1,0 +1,3 @@
+[submodule "node-rfid"]
+	path = node-rfid
+	url = https://github.com/NAzT/node-rfid.git
