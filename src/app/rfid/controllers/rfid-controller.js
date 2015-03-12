@@ -16,12 +16,17 @@ angular.module('rfid')
         // utterance.text = "บัตรหมายเลข " + data.cardId.split().join(" ") + " สามารถเข้าสู่ระบบได้ค่ะ";
          utterance.text = "สวัสดีแมน"; 
          utterance.text = "สวัสดีก้าว"; 
+         // utterance.text = "สวัสดีน้องแมน: " + new Date(); 
+         utterance.text = new Date().toString();
         // utterance.text = "Card number " + data.cardId;
         // utterance.text += "Permission granted ";
         // utterance.text += "How can I serve you today?";
         utterance.lang = 'en-UK';
         // utterance.rate = 2;
         // utterance.pitch = 0;
+          // utterance.rate = 0.1;
+      utterance.pitch = 1.0;
+      // utterance.volume = 0.5;
         utterance.lang = 'th-TH';
 
 
