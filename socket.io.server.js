@@ -15,7 +15,27 @@
 
     rfid.on("data", function(data) {
         console.log("DATA: ", data);
-        io.sockets.emit('rfid-read', { cardId: data });
+        var name;
+        var object = { 
+            name: {},
+            cardId: data
+        }
+
+        if (data == "BDB27BCC") {
+            object['name'].th = "แมน";
+            object['name'].en = "Man";
+        }
+        else if (data == "A5B5522F") {
+            object['name'].th = "Nat";
+            object['name'].en = "Nat";
+        }
+        else {
+            object['name'].th = "none";
+            object['name'].en = "none";
+
+        }
+
+        io.sockets.emit('rfid-read', object);
     });
 
     io.sockets.on('connection', function(socket) {

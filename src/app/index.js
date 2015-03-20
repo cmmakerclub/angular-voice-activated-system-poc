@@ -22,6 +22,10 @@ angular.module('rfid', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRo
         templateUrl: 'app/about/partials/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/user', {
+        templateUrl: 'app/about/partials/about.html',
+        controller: 'UserCtrl'
+      })
       .when('/rfid', {
         templateUrl: 'app/rfid/partials/rfid.html',
         controller: 'RfidCtrl'
