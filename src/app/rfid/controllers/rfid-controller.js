@@ -13,6 +13,7 @@ angular.module('rfid')
 
     var upgrade = function() {
       console.log("UPGRADE");
+      $scope.msg = "SHOULD BE UPGRADE";
     }
     
     if (!('webkitSpeechRecognition' in window)) {
@@ -143,43 +144,9 @@ angular.module('rfid')
 
     }
 
-    //    $scope.mic;
-    //    $scope.$on('$viewContentLoaded', function(){
-    //     console.log("LOADED");
-    //     var info = function (msg) {
-    //       document.getElementById("info").innerHTML = msg;
-    //     };
-    //     var error = function (msg) {
-    //       document.getElementById("error").innerHTML = msg;
-    //     };
-    //     $scope.mic = new Wit.Microphone(document.getElementById("microphone"));
-    //     $scope.mic.onready = function () {
-    //       info("Microphone is ready to record");
-    //     };
-    //     $scope.mic.onaudiostart = function () {
-    //       info("Recording started");
-    //       error("");
-    //     };
-    //     $scope.mic.onaudioend = function () {
-    //       info("Recording stopped, processing started");
-    //     };
-
-    //     $scope.mic.onresult = function (intent, entities) {
-    //       console.log(intent, entities);
-
-    //       $scope.json = JSON.stringify(entities);
-    //       $scope.$apply();
-    //     }
-
-
-    //    localStorage.setItem("wit_token", "5BSTED4RWQT6M7GH44SDIBJCTHC4XJQV")
-    //    var token = localStorage.getItem('wit_token');
-    //    if (!token) {
-    //      throw new Error("Could not find token!");
-    //    }
-    //    $scope.mic.connect(token);
-    //   //Here your view content is fully loaded !!
-    // });
+       $scope.$on('$viewContentLoaded', function(){
+        console.log("LOADED");
+    });
 
     socket.on('rfid-read', function(data) {
         $scope.cardId = data.cardId;
