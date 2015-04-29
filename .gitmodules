@@ -1,3 +1,6 @@
 [submodule "node-rfid"]
 	path = node-rfid
 	url = https://github.com/NAzT/node-rfid.git
+[submodule "simple-socket.io-server"]
+	path = simple-socket.io-server
+	url = https://github.com/cmmakerclub/simple-socket.io-server.git
