@@ -2,15 +2,18 @@
 
   <div ng-include="'components/navbar/navbar.html'"></div>
 
-  <h1> Card: {{ cardId }} </h2>
+
+  <h1 ng-hide="cardId">Waiting...</h2>
+  <h1><span ng-show="cardId">CARD: </span> {{ cardId }} </h2>
   {{ status }}
 
-    <center><div id="microphone"></div></center>
+<!--     <center><div id="microphone"></div></center>
+
     <pre id="result"></pre>
     <div id="info"></div>
     <div id="error"></div>
-
-
+ -->
+<!-- 
     {{ json }}
 
 
@@ -19,11 +22,11 @@
 
     <h1>2: </h1>
     <h2>{{ final_text }} </h2>
+ -->
 
-
-
+<!-- 
   <div class="footer">
     <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
   </div>
-
+ -->
 </div>

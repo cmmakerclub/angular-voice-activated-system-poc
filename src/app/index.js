@@ -15,8 +15,8 @@ angular.module('rfid', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRo
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'app/rfid/partials/rfid.html',
+        controller: 'RfidCtrl'
       })
       .when('/about', {
         templateUrl: 'app/about/partials/about.html',

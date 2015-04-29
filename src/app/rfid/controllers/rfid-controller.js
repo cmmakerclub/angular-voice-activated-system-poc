@@ -133,9 +133,9 @@ angular.module('rfid')
 
 
         if (!speechSynthesis.speaking) {
-          speechSynthesis.speak(utterance, function() {
-            console.log("arguments: ", arguments);
-          })
+          // speechSynthesis.speak(utterance, function() {
+          //   console.log("arguments: ", arguments);
+          // })
 
         }
         else {
